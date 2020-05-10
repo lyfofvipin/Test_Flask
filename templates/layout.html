@@ -1,0 +1,11 @@
+<html>
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Flask</title>
+    {% endif %}
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

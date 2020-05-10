@@ -1,11 +1,4 @@
-<html>
-    {% if title %}
-    <title>{{ title }}</title>
-    {% else %}
-    <title>Home</title>
-    {% endif %}
-    <body>
-        <h1>Hello World!</h1><br>
-        <h2>This is home Page.</h2>
-    </body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+    <h2>This is Home Page.</h2>
+{% endblock %}
