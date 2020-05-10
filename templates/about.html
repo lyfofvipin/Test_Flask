@@ -1,10 +1,4 @@
-<html>
-    {% if title %}
-    <title>{{ title }}</title>
-    {% else %}
-    <title>About</title>
-    {% endif %}
-    <body>
-        <h2>This is about Page.</h2>
-    </body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+    <h2>This is about Page.</h2>
+{% endblock %}
