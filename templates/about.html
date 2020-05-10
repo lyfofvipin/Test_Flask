@@ -1,5 +1,9 @@
 <html>
-    <title>Home</title>
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>About</title>
+    {% endif %}
     <body>
         <h2>This is about Page.</h2>
     </body>
