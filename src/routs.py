@@ -75,3 +75,15 @@ def account():
         form.email.data = current_user.email
     image_file = url_for('static', filename='profile_pic/' + current_user.image)
     return render_template("account.html", title="Flask | ACCOUNT", image_file=image_file, form=form)
+
+@app.errorhandler(404)
+def error_404(error):
+    return render_template("404.html", title="Flask | ERROR"), 404
+
+@app.errorhandler(403)
+def error_403(error):
+    return render_template("403.html", title="Flask | ERROR"), 403
+
+@app.errorhandler(500)
+def error_500(error):
+    return render_template("500.html", title="Flask | ERROR"), 500
